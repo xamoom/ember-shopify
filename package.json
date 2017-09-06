@@ -1,7 +1,7 @@
 {
   "name": "ember-shopify",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Ember addon for integrating shopify-buy JS SDK",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.12.0"
   },
-  "author": "",
+  "author": "Pavol Dano",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -41,7 +41,9 @@
     "loader.js": "^4.0.10"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "shopify",
+    "shopify-buy"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.7"
