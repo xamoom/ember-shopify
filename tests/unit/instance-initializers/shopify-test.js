@@ -38,14 +38,20 @@ sinonTest('sets up shopify-service properties taking their values from the confi
   ]);
 
   assert.equal(
-    accessToken, ENV['shopify-buy'].accessToken, 'accessToken gets set using the respective value from the config file',
+    accessToken,
+    ENV['shopify-buy'].accessToken,
+    'accessToken gets set using the respective value from the config file',
   );
 
   assert.equal(
-    domain, ENV['shopify-buy'].domain, 'domain gets set using the respective value from the config file',
+    domain,
+    ENV['shopify-buy'].domain,
+    'domain gets set using the respective value from the config file',
   );
 
   assert.equal(
-    appId, ENV['shopify-buy'].appId, 'appId gets set using the respective value from the config file',
+    appId,
+    ENV['shopify-buy'].appId,
+    'appId gets set using the respective value from the config file',
   );
 });

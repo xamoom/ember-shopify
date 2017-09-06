@@ -15,6 +15,7 @@ module.exports = {
     "no-console": "off",
     "import/no-unresolved": "off",
     "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
     "import/extensions": "off",
   },
   settings: {

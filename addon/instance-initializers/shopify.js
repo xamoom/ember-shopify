@@ -33,11 +33,10 @@ export default function initializeShopify(appInstance, ENV) {
 
   setProperties(
     shopifyService,
-    getProperties(
-      shopifyBuyConfig, [
-        'accessToken',
-        'domain',
-        'appId',
-      ]),
+    getProperties(shopifyBuyConfig, [
+      'accessToken',
+      'domain',
+      'appId',
+    ]),
   );
 }
