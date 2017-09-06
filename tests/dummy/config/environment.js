@@ -16,7 +16,12 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
+    'shopify-buy': {
+      enabled: true,
+      accessToken: 'accessToken',
+      domain: 'domain',
+      appId: 'appId',
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
