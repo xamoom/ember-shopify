@@ -1,13 +1,56 @@
 # Ember-shopify
 
-This README outlines the details of collaborating on this Ember addon.
+Ember addon providing a service representing an interface to the [shopify-buy Javascript SDK](http://shopify.github.io/js-buy-sdk/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-shopify`
-* `npm install`
-* `bower install`
+`ember install ember-shopify`
+
+## Background
+
+This addon inserts `<script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>` into your `app/index.html` file during build process. The addon has been provided to satisfy older Ember versions that cannot import scripts from `node_modules` since their dependencies could be installed via bower exclusively [(see the issue on github)](https://github.com/ember-cli/ember-cli/issues/3890). 
+
+## Usage
+
+Update your `config/environment.js` using your shopify-related settings:
+```
+...
+const ENV = {
+   ...
+   'shopify-buy': {
+     enabled: true,
+     accessToken: 'your-access-token',
+     domain: 'your-shop-subdomain.myshopify.com',
+     appId: '6',
+   },
+   ...
+}
+```
+
+These values will be set upon the exposed `shopify` service via initializer. 
+You can inject the service whereever you need just as usual:
+
+```
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  shopify: Ember.inject.service(),
+  ...
+});
+```
+
+The service populates Shopify's primary interface (client) as a computed property `shopClient` [(client reference API)](http://shopify.github.io/js-buy-sdk/api/classes/ShopClient.html):
+```
+...
+  model(){
+   const shopifyService = Ember.get(this, 'shopify');
+   const shopifyClient = Ember.get(shopifyService, 'shopClient');
+   
+   // use the populated client as you wish
+   return shopifyClient.fetchProduct('8569911558');
+  },
+...
+```
 
 ## Running
 
@@ -16,7 +59,6 @@ This README outlines the details of collaborating on this Ember addon.
 
 ## Running Tests
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
 
