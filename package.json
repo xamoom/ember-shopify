@@ -1,6 +1,6 @@
 {
   "name": "ember-shopify",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Ember addon for integrating shopify-buy JS SDK",
   "directories": {
     "doc": "doc",
