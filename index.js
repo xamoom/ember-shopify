@@ -14,7 +14,7 @@ module.exports = {
       return;
     }
 
-    return '<script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>';
+    return '<script src="https://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>';
   },
 
 };
