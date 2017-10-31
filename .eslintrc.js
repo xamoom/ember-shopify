@@ -17,6 +17,7 @@ module.exports = {
     "import/no-named-as-default": "off",
     "import/no-named-as-default-member": "off",
     "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
   },
   settings: {
     'import/core-modules': [
