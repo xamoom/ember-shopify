@@ -3,6 +3,7 @@ module.exports = {
     embertest: true
   },
   rules: {
+    "func-names": "off",
     "no-console": "off",
     "import/no-unresolved": "off",
     "import/extensions": "off",

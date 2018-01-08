@@ -1,10 +1,5 @@
-import Ember from 'ember';
-
-const {
-  computed,
-  getProperties,
-  Service,
-} = Ember;
+import { getProperties, computed } from '@ember/object';
+import Service from '@ember/service';
 
 export default Service.extend({
 

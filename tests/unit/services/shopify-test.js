@@ -1,10 +1,6 @@
+import { get } from '@ember/object';
 import { moduleFor, test } from 'ember-qunit';
-import Ember from 'ember';
 import sinonTest from 'ember-sinon-qunit/test-support/test';
-
-const {
-  get,
-} = Ember;
 
 moduleFor('service:shopify', 'Unit | Service | shopify', {
 
@@ -18,7 +14,7 @@ moduleFor('service:shopify', 'Unit | Service | shopify', {
 
 });
 
-test('should have correct property values by default', function(assert) {
+test('should have correct property values by default', function (assert) {
   const service = this.subject();
 
   assert.equal(get(service, 'accessToken'), null, 'accessToken is null by default');
@@ -26,7 +22,7 @@ test('should have correct property values by default', function(assert) {
   assert.equal(get(service, 'appId'), null, 'appId is null by default');
 });
 
-sinonTest("should instantiate shopify-buy client on first get(service, 'shopClient') call", function(assert) {
+sinonTest("should instantiate shopify-buy client on first get(service, 'shopClient') call", function (assert) {
   const accessToken = 'accessToken';
   const domain = 'domain';
   const appId = 'appId';

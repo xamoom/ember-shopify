@@ -1,10 +1,5 @@
-import Ember from 'ember';
-
-const {
-  isEmpty,
-  getProperties,
-  setProperties,
-} = Ember;
+import { isEmpty } from '@ember/utils';
+import { setProperties, getProperties } from '@ember/object';
 
 export default function initializeShopify(appInstance, ENV) {
   const shopifyService = appInstance.lookup('service:shopify');
